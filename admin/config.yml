@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "aycollection"
+media_library:
+  name: uploadcare
+  config: {}
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "aycollection"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
