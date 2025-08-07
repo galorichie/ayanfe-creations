@@ -2,10 +2,12 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "aycollection"
+media_folder: "aycollection" # Path inside your repo where uploaded files will go
+public_folder: "/aycollection" # How to access those files publicly (this was missing)
+
 media_library:
   name: uploadcare
-  config: {}
+  config: {} # This is okay as a placeholder
 
 collections:
   - name: "products"
