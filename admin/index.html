@@ -5,5 +5,15 @@
     <title>Content Manager</title>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script src="https://unpkg.com/decap-bridge/dist/decap-bridge.js"></script>
+    <script>
+      DecapBridge.init().then((config) => {
+        window.CMS.init(config);
+      });
+    </script>
+  </body>
 </html>
