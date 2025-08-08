@@ -1,27 +1,16 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 
-media_folder: "aycollection" # Path inside your repo where uploaded files will go
-public_folder: "/aycollection" # How to access those files publicly (this was missing)
-
-media_library:
-  name: uploadcare
-  config: {} # This is okay as a placeholder
+media_folder: "images/uploads"   # where images will be stored in the repo
+public_folder: "/images/uploads" # how they’ll be served on the site
 
 collections:
-  - name: "products"
-    label: "Products"
-    folder: "aycollection"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Image"
-        name: "image"
-        widget: "image"
-      - label: "Description"
-        name: "description"
-        widget: "text"
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "About Section", name: "about", widget: "string" }
