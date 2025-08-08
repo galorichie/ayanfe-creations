@@ -1,20 +1,33 @@
 backend:
-  name: github
-  repo: galorichie/my-portfolio # Change to your repo
-  branch: master # Or main
-  base_url: https://YOUR-DECAPBRIDGE-URL # From DecapBridge setup
+  name: git-gateway
+  branch: master
+  repo: galorichie/ayanfe-creations
+  site_domain: ayanfecreationswebsite.netlify.app
+  base_url: https://decapbridge.com/api/<YOUR-SITE-ID> # Replace with your DecapBridge API link
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: "homepage"
-    label: "Homepage"
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: "index.html"
-        label: "Homepage Content"
-        name: "home"
+      - label: "About Us"
+        name: "about"
+        file: "content/about.md"
         fields:
-          - { label: "Hero Title", name: "hero_title", widget: "string" }
-          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
+      - label: "Catalog"
+        name: "catalog"
+        file: "content/catalog.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Items", name: "items", widget: "list", fields: [{ label: "Name", name: "name", widget: "string" }, { label: "Price", name: "price", widget: "string" }, { label: "Image", name: "image", widget: "image" }] }
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Message", name: "message", widget: "markdown" }
