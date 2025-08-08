@@ -7,13 +7,7 @@
   </head>
   <body>
     <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
-    <script src="https://unpkg.com/decap-bridge/dist/decap-bridge.js"></script>
-    <script>
-      DecapBridge.init().then((config) => {
-        window.CMS.init(config);
-      });
+      CMS.init();
     </script>
   </body>
 </html>

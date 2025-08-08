@@ -1,19 +1,7 @@
 backend:
-  name: decap-bridge
-  login: true
-  repo: galorichie/ayanfe-creations # your GitHub repo in org/repo format
-  branch: master # change if using main
-
-media_folder: "images/uploads" # where uploaded files will go in your repo
-public_folder: "/images/uploads" # public URL path for those images
-
-collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "index.html"
-        label: "Home Page"
-        name: "home"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+  name: github
+  repo: galorichie/ayanfe-creations
+  branch: master
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+collections: []
