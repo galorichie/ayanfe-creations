@@ -1,33 +1,19 @@
 backend:
-  name: git-gateway
-  branch: master
-  repo: galorichie/ayanfe-creations
-  site_domain: ayanfecreationswebsite.netlify.app
-  base_url: https://decapbridge.com/api/<YOUR-SITE-ID> # Replace with your DecapBridge API link
+  name: decap-bridge
+  login: true
+  repo: galorichie/ayanfe-creations # your GitHub repo in org/repo format
+  branch: master # change if using main
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "images/uploads" # where uploaded files will go in your repo
+public_folder: "/images/uploads" # public URL path for those images
 
 collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "About Us"
-        name: "about"
-        file: "content/about.md"
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "body", widget: "markdown" }
-      - label: "Catalog"
-        name: "catalog"
-        file: "content/catalog.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Items", name: "items", widget: "list", fields: [{ label: "Name", name: "name", widget: "string" }, { label: "Price", name: "price", widget: "string" }, { label: "Image", name: "image", widget: "image" }] }
-      - label: "Contact"
-        name: "contact"
-        file: "content/contact.md"
-        fields:
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "Message", name: "message", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown" }
