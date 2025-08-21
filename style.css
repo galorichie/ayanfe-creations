@@ -1,9 +1,11 @@
 /*-------hero section----------Area-------*/
 
 .heroWrapper{
-background: url(aycollection/bg.jpg) center;
+background-image: url(aycollection/bg.jpg);
 min-height: 400px;
-background-size: contain;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
 .banner{
     background-color: #191232;
