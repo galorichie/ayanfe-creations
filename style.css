@@ -1,7 +1,7 @@
 /*-------hero section----------Area-------*/
 
 .heroWrapper{
-background: url(aycollection/bg.jpg) center;
+background: url(aycollection/bg.jpg) Cover;
 min-height: 400px;
 background-size: contain;
 }
